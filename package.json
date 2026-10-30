@@ -1,0 +1,42 @@
+{
+  "name": "dsh-video-learn",
+  "version": "1.0.0",
+  "description": "视频学习闭环插件：链接识别→抽帧看懂→22字段结构化日志→Notion/本地→强记忆检索→每日复习→任务调用→技能沉淀。零外部依赖。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "video",
+    "learning",
+    "knowledge-base",
+    "bilibili",
+    "spaced-repetition"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./store": "./lib/store.js",
+    "./recognizer": "./lib/recognizer.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "tests"
+  ],
+  "scripts": {
+    "test": "node --test tests/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}
